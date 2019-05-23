@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/dl.css">
+
+</head>
+
+<body>
+
+    <div id="login_dl" class="login">
+        <div class="login_title">
+            <span>账号登录</span>
+        </div>
+        <div class="login_fields">
+            <div class="login_fields__user">
+                <div class="icon">
+                    <img src="images/dl_user_icon_copy.png">
+                </div>
+                <input id="dLyhm" placeholder="用户名" type="text">
+                <div class="validation">
+                    <img src="images/dl_tick.png">
+                </div>
+
+            </div>
+            <div class="login_fields__password">
+                <div class="icon">
+                    <img src="images/dl_lock_icon_copy.png">
+                </div>
+                <input id="dLmm" placeholder="密码" type="password">
+                <div class="validation" style="opacity:1;right: 27px;">
+                    <img id="dl_yjH" src="images/dl_yj2.png" width="16">
+                </div>
+            </div>
+            <div class="login_fields__submit">
+                <input id="Dl" type="submit" value="登录">
+                <!-- <div class="forgot">
+                    <a href="#">忘记密码?</a>
+                </div> -->
+                <input id="Zc" type="submit" value="注册">
+            </div>
+        </div>
+        <div class="success">
+            <h2>认证成功</h2>
+            <p style="padding-top: 20px;">欢迎回来</p>
+        </div>
+        <div class="disclaimer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper laoreet placerat. Nullam semper
+                auctor justo, rutrum posuere odio vulputate nec.</p>
+        </div>
+    </div>
+    <div class="authent">
+        <img src="images/dl_puff.svg">
+        <p>认证中...</p>
+    </div>
+
+
+    <!-- 注册 -->
+
+
+    <div id="dl_zc" class="login">
+        <div id="dl_zcfhan">
+            <a href="javascript:;">
+                <--- </a> </div> <div class="login_title">
+                    <span>账号注册</span>
+        </div>
+        <div class="login_fields">
+            <div class="login_fields__user">
+                <div class="icon">
+                    <img src="images/dl_user_icon_copy.png">
+                </div>
+                <input id="zCdLyhm" placeholder="请输入邮箱" type="text">
+                <div class="validation">
+                    <img src="images/dl_tick.png">
+                </div>
+
+            </div>
+            <div class="login_fields__password">
+                <div class="icon">
+                    <img src="images/dl_lock_icon_copy.png">
+                </div>
+                <input id="zCdLmm" placeholder="请输入密码" type="password">
+                <div class="validation">
+                    <img src="images/dl_tick.png">
+                </div>
+            </div>
+            <div class="login_fields__submit">
+                <!-- <input id="Dl" type="submit" value="登录"> -->
+                <!-- <div class="forgot">
+                <a href="#">忘记密码?</a>
+            </div> -->
+                <!-- <input id="Zc" type="submit" value="注册"> -->
+            </div>
+            <div class="login_fields__submit">
+                <input id="Zccz" type="submit" value="注册">
+            </div>
+        </div>
+        <div class="disclaimer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper laoreet placerat. Nullam semper
+                auctor justo, rutrum posuere odio vulputate nec.</p>
+        </div>
+    </div>
+
+
+    <!-- 注册成功后显示弹窗 -->
+    <div id="dl_zctcc" class="dl_zctcc">
+        <div class="dl_zctccnr">
+            注册成功！
+        </div>
+    </div>
+
+    <!-- 登录密码不匹配后显示弹窗 -->
+    <div id="dl_mmtcc" class="dl_zctcc">
+        <div class="dl_zctccnr">
+            密码错误！
+        </div>
+    </div>
+
+    <script>
+
+        //获取包裹登陆框的DIV
+        var login = document.getElementById('login_dl');
+        //获取登录按钮
+        var Dl = document.getElementById('Dl');
+        //获取认证框
+
+        var authent = document.querySelector('.authent');
+
+        //获取登录框
+        var dLyhm = document.getElementById('dLyhm');
+        //获取密码框
+        var dLmm = document.getElementById('dLmm');
+        // 获取两个 class 为icon  的图标盒子 
+        var dlAndMa = document.querySelectorAll('.icon');
+        // 获取失去焦点时要显示的小图标 √或X
+        var vaLidation = document.querySelectorAll('.validation');
+        // //先写死账号密码
+        // var dlZh = 'qq999';
+        // var dlMmc = 'qq777';
+        //先写死登陆成功后要跳转的地址
+        //缓存里设置 值
+        // window.localStorage.setItem('res', 'https://www.baidu.com/');
+        //取出哪个入口进入的缓存  地址
+        var res = window.localStorage.getItem('sHfdl_cc');
+        console.log(res);
+
+
+        //获取注册框div
+        var dl_zc = document.getElementById('dl_zc');
+
+        //登录用户名获取焦点事件
+        dLyhm.onfocus = function () {
+            dlAndMa[0].style.opacity = 1;
+            vaLidation[0].style.opacity = 0;
+            vaLidation[0].style.right = 0;
+        }
+        //登录用户名失去焦点事件
+        dLyhm.onblur = function () {
+            dlAndMa[0].style.opacity = .5;
+            vaLidation[0].style.opacity = 1;
+            vaLidation[0].style.right = 30 + 'px';
+            //一个开关 用来判断登录民是否在缓存里  
+            var flag = true;
+
+            for (var i in localStorage) {
+                if (dLyhm.value == i) {
+                    flag = true;
+                    //登录框错误时 注册按钮属性里加 zIndex  = 0
+                    dLyhm.dataset.zIndex = "1";
+                    vaLidation[0].children[0].src = 'images/dl_tick.png'
+                    break;
+                } else {
+                    flag = false;
+                    //登录框正确时 注册按钮属性里加 zIndex  = 0
+                    dLyhm.dataset.zIndex = "0";
+                    vaLidation[0].children[0].src = 'images/dl_x.png'
+                }
+            }
+        }
+
+        //登录密码获取焦点事件
+        dLmm.onfocus = function () {
+            dlAndMa[1].style.opacity = 1;
+            // vaLidation[1].style.opacity = 0;
+            // vaLidation[1].style.right = 0;
+        }
+        //登录密码失去焦点事件
+
+        dLmm.onblur = function () {
+            dlAndMa[1].style.opacity = .5;
+            // vaLidation[1].style.opacity = 1;
+            // vaLidation[1].style.right = 30 + 'px';
+
+            //一个开关 用来判断登录民是否在缓存里  
+            var flag = true;
+            for (var i in localStorage) {
+                //判断密码是否正确
+                if (dLyhm.value == i && dLmm.value == localStorage[i]) {
+                    console.log(localStorage[i]);
+                    flag = true;
+                    //登录框错误时 注册按钮属性里加 zIndex  = 0
+                    dLmm.dataset.zIndex = "1";
+                    // vaLidation[1].children[0].src = 'images/dl_yj2.png'
+                    break;
+                } else {
+                    flag = false;
+                    //登录框正确时 注册按钮属性里加 zIndex  = 0
+                    dLmm.dataset.zIndex = "0";
+                    // vaLidation[1].children[0].src = 'images/dl_yj1.png'
+                }
+            }
+
+        }
+
+        //点击眼睛登录密码显示
+        var dl_yjH = document.getElementById('dl_yjH');
+        //点击事件
+        //眼睛开关
+        //var dl_yjHKg = true;
+        // dl_yjH.onclick = function () {
+        //     if(dl_yjHKg){
+        //          dl_yjHKg = false;
+        //         vaLidation[1].children[0].src = 'images/dl_yj1.png';
+        //         dLmm.type = 'text';
+        //     }else{
+        //          dl_yjHKg = true;
+        //         vaLidation[1].children[0].src = 'images/dl_yj2.png';
+        //         dLmm.type = dlmmType;
+        //     }
+        // }
+        dl_yjH.onmouseenter = function () {
+            vaLidation[1].children[0].src = 'images/dl_yj1.png';
+            dLmm.type = 'text';
+        }
+        dl_yjH.onmouseleave = function () {
+            vaLidation[1].children[0].src = 'images/dl_yj2.png';
+            dLmm.type = 'password';
+        }
+
+
+        //点击登录按钮认证
+        Dl.onclick = function () {
+            console.log(login);
+            // dataset   H5  获取自定义属性
+            //dLyhm.dataset.zIndex == 1 && dLmm.dataset.zIndex == 1  
+            if (dLyhm.dataset.zIndex == 1) {
+                if(dLmm.value.trim() == ''){
+                    dLmm.focus();
+                    dLmm.value ='';
+                    return;
+                }
+                dlZxdh();
+                //登录成功与不成功都清除密码框 内的 内容
+                dLmm.value = '';
+            } else {
+                return;
+            }
+        }
+
+        // 点击登录按钮 后执行的动画
+        function dlZxdh() {
+            login.classList.add('test');
+            setTimeout(function () {
+                login.classList.add('testtwo');
+            }, 400);
+            authent.classList.add('visible');
+            setTimeout(function () {
+                authent.style.opacity = 1;
+                authent.style.right = -320 + 'px';
+                authent.style.display = 'block';
+            }, 400);
+
+
+            setTimeout(function () {
+                login.classList.remove('testtwo');
+                authent.style = '';
+            }, 4000);
+            setTimeout(function () {
+                login.classList.remove('test');
+            }, 4400);
+
+            setTimeout(function () {
+                authent.classList.remove('visible');
+            }, 4600);
+            setTimeout(function () {
+                if (dLmm.dataset.zIndex == 1) {
+                    //登录成功后 设置缓存里的sHfdl  的值 ，如果没有就设置
+                    var sHfdl = window.localStorage.setItem('sHfdl',true);
+                    //登录成功后  清除登录框输入框内的 内容
+                    dLyhm.value = '';
+                    //登录后动画执行回来后 隐藏 原来的登录框显示登录成功 2秒后跳出
+                    for (var i = 0; i < login.children.length; i++) {
+                        login.children[i].style.display = 'none';
+                    }
+                    login.children[2].style.display = 'block';
+                    setTimeout(function () {
+                        // 登录成功后取出 缓存res 里的值 跳转
+                        window.location.href = res;
+                    }, 2000);
+                } else {
+                    //密码不匹配时 弹出 框
+                    var dl_mmtcc = document.getElementById('dl_mmtcc');
+                    dl_mmtcc.classList.add('dl_show');
+                    // 一秒钟后在移除弹出窗
+                    setTimeout(function () {
+                        dl_mmtcc.classList.remove('dl_show');
+                    }, 1000);
+                    // console.log ('登录密码错误');
+                    //密码匹配失败后获取密码框   焦点
+                    dLmm.focus();
+                }
+            }, 4000);
+        }
+
+
+
+
+        // 注册---------------------------------------------------------------------
+
+        // 获取注册里面的注册按钮
+        var Zccz = document.getElementById('Zccz');
+        //获取注册页面登录框
+        var zCdLyhm = document.getElementById('zCdLyhm');
+        //获取注册页密码框
+        var zCdLmm = document.getElementById('zCdLmm');
+
+        //获取登录里面的注册按钮
+        var Zc = document.getElementById('Zc');
+        Zc.onclick = function () {
+
+            setTimeout(function () {
+                dl_zc.style.left = 50 + 'px';
+                dl_zc.style.top = -20 + 'px';
+                dl_zc.style.opacity = 1;
+                dl_zc.style.zIndex = 2;
+            }, 500);
+            setTimeout(function () {
+                dl_zc.style.left = 0;
+                dl_zc.style.top = 0;
+            }, 1000);
+
+
+            setTimeout(function () {
+                login.style.zIndex = 1;
+                login.style.left = -50 + 'px';
+                login.style.top = 20 + 'px';
+                login.style.opacity = .5;
+            }, 500);
+            setTimeout(function () {
+                login.style.opacity = 0;
+                login.style.left = 0;
+                login.style.top = 0;
+            }, 1000);
+            setTimeout(function () {
+                dLyhm.value = '';
+                dLmm.value = '';
+                vaLidation[0].style.opacity = 0;
+                vaLidation[0].style.right = 0;
+                // vaLidation[1].style.opacity = 0;
+                // vaLidation[1].style.right = 0;
+            }, 1000);
+        }
+
+
+        //    点击登录框翻转动画或注册成功后出发返登录框
+        //getsj  这里 的参数 是调用 传过来的时间，有些调用清除后清除内容时间不一样
+        function FZ(getsj) {
+            setTimeout(function () {
+                login.style.left = 50 + 'px';
+                login.style.top = -20 + 'px';
+                login.style.opacity = 1;
+                login.style.zIndex = 2;
+            }, 500);
+            setTimeout(function () {
+                login.style.left = 0;
+                login.style.top = 0;
+            }, 1000);
+
+
+            setTimeout(function () {
+                dl_zc.style.zIndex = 1;
+                dl_zc.style.left = -50 + 'px';
+                dl_zc.style.top = 20 + 'px';
+                dl_zc.style.opacity = .5;
+            }, 500);
+            setTimeout(function () {
+                dl_zc.style.opacity = 0;
+                dl_zc.style.left = 0;
+                dl_zc.style.top = 0;
+            }, 1000);
+
+            //2400 毫秒后 反转动画执行结束 清空注册页面登陆框&&密码框里的内容
+            //                           把勾和×的样式还原
+            setTimeout(function (getsj) {
+                zCdLyhm.value = '';
+                zCdLmm.value = '';
+                vaLidation[2].style.opacity = 0;
+                vaLidation[2].style.right = 0;
+                vaLidation[3].style.opacity = 0;
+                vaLidation[3].style.right = 0;
+            }, getsj);
+
+        }
+
+
+
+        //注册页面     登录用户名获取焦点事件
+        zCdLyhm.onfocus = function () {
+            dlAndMa[2].style.opacity = 1;
+            vaLidation[2].style.opacity = 0;
+            vaLidation[2].style.right = 0;
+        }
+
+        //注册页面 登录用户名失去焦点事件
+
+        zCdLyhm.onblur = function () {
+            dlAndMa[2].style.opacity = .5;
+            vaLidation[2].style.opacity = 1;
+            vaLidation[2].style.right = 30 + 'px';
+            //一个开关 用来判断登录民是否在缓存里  
+            var flag = true;
+
+            //邮箱验证
+            var yxyz = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(zCdLyhm.value);
+
+            //循环遍历  localStorage 里的键   是否等于当前注册页面登录按钮的值 如果有一个等于就关掉开关
+            for (var i in localStorage) {
+                if (zCdLyhm.value == i || !yxyz) {
+                    flag = false;
+                    //登录框错误时 注册按钮属性里加 zIndex  = 0
+                    Zccz.dataset.zIndex = "0";
+                    break;
+                } else {
+                    flag = true;
+                    //登录框正确时 注册按钮属性里加 zIndex  = 0
+                    Zccz.dataset.zIndex = "1";
+                }
+            }
+
+            //判断 登录名是否存在  缓存里   flag  到了这一步如果没有变成false 证明不在缓存里
+            if (flag) {
+                vaLidation[2].children[0].src = 'images/dl_tick.png'
+            } else {
+                vaLidation[2].children[0].src = 'images/dl_x.png'
+                // alert('用户已注册');
+            }
+
+        }
+
+        //注册页面 登录密码获取焦点事件
+        zCdLmm.onfocus = function () {
+            dlAndMa[3].style.opacity = 1;
+            vaLidation[3].style.opacity = 0;
+            vaLidation[3].style.right = 0;
+        }
+        //注册页面 登录密码失去焦点事件
+
+        zCdLmm.onblur = function () {
+            dlAndMa[3].style.opacity = .5;
+            vaLidation[3].style.opacity = 1;
+            vaLidation[3].style.right = 30 + 'px';
+            //判断密码是否正确
+            if (zCdLmm.value.trim() != '') {
+                vaLidation[3].children[0].src = 'images/dl_tick.png'
+            } else {
+                vaLidation[3].children[0].src = 'images/dl_x.png'
+            }
+        }
+
+
+        Zccz.onclick = function () {
+            //获取注册成功弹出窗
+            var dl_zctcc = document.getElementById('dl_zctcc');
+            //判断注册页面登录框  是不是正确， 正确的话会在注册按钮里加一个属性为 1 错误就是0  &&且密码框里必须有值 不能为空
+            if (Zccz.dataset.zIndex == 1 && zCdLmm.value.trim() != '') {
+                // console.log(Zccz.dataset.zIndex);
+                //注册成功后把账号存入 缓存里的键   ， 密码框里的内容存为值
+                localStorage.setItem(zCdLyhm.value, zCdLmm.value);
+                //弹出注册成功
+                dl_zctcc.classList.add('dl_show');
+                //1000 毫秒弹出注册移除
+                setTimeout(function () {
+                    dl_zctcc.classList.remove('dl_show');
+                }, 1000);
+                //1400 毫秒后执行反转动画   反转到登陆窗口
+                setTimeout(function () {
+                    FZ(2400);
+                }, 1400);
+
+            }
+        }
+
+
+        document.getElementById('dl_zcfhan').onclick = function () {
+            FZ(1000);
+        }
+
+    </script>
+</body>
+
+</html>
