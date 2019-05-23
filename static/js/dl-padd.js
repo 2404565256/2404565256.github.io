@@ -14,8 +14,8 @@ window.onload = function () {
             // alert(1);
             //缓存里有 sHfdl  的值 ==  都是登录后设置的 true
             //缓存里有 sHfdl  的值 成功后随机取一张图片
-            console.log(window.location.href == 'file:///E:/lincolnChina/index.html#');
-            if(window.location.href == 'file:///E:/lincolnChina/index.html#'||window.location.href == 'file:///E:/lincolnChina/index.html'){
+            // console.log(window.location.href == 'https://2404565256.github.io/index.html#');
+            if(window.location.href == 'https://2404565256.github.io/index.html#'||window.location.href == 'https://2404565256.github.io/index.html'){
                 var dl_txSz = ['static/images/pgLk_toux1.jpg', 'static/images/pgLk_toux2.jpg', 'static/images/pgLk_toux3.jpg'];
             }else{
                 var dl_txSz = ['images/pgLk_toux1.jpg', 'images/pgLk_toux2.jpg', 'images/pgLk_toux3.jpg'];
@@ -33,7 +33,7 @@ window.onload = function () {
                 //获取到当前的地址  
                 console.log(window.location.href);
                 window.localStorage.setItem('sHfdl_cc', window.location.href);
-                window.location.href = 'file:///E:/lincolnChina/static/dl.html';
+                window.location.href = 'https://2404565256.github.io/static/dl.html';
             }
         }
     }(window))
