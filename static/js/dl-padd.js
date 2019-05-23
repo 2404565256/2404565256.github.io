@@ -15,7 +15,7 @@ window.onload = function () {
             //缓存里有 sHfdl  的值 ==  都是登录后设置的 true
             //缓存里有 sHfdl  的值 成功后随机取一张图片
             // console.log(window.location.href == 'https://2404565256.github.io/index.html#');
-            if(window.location.href == 'https://2404565256.github.io/index.html#'||window.location.href == 'https://2404565256.github.io/index.html'){
+            if(window.location.href == 'https://2404565256.github.io'){
                 var dl_txSz = ['static/images/pgLk_toux1.jpg', 'static/images/pgLk_toux2.jpg', 'static/images/pgLk_toux3.jpg'];
             }else{
                 var dl_txSz = ['images/pgLk_toux1.jpg', 'images/pgLk_toux2.jpg', 'images/pgLk_toux3.jpg'];
