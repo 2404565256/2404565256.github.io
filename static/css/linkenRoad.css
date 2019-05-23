@@ -1,0 +1,222 @@
+
+/* 中间开始 */
+.banner {
+  overflow: hidden;
+}
+.banner .banner-top {
+  width: 1438px;
+  height: 49px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #e4e4e0;
+  background:rgba(255,255,255,0.8);
+  box-sizing: border-box;
+  position: relative;
+}
+.banner-top .hd {
+  display: inline-block;
+  height: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.banner-top .hd a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+.banner-top .hd .ul1 {
+  display: inline-block;
+  width: 421px;
+  background:rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top:49px;
+  left:0;
+  display: none;
+}
+.banner-top .hd .ul1 li{
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+.banner-top .hd .ul1 li a{
+  font-size: 20px;
+  color:black;
+}
+.banner-top .hd a span {
+  font-size: 26px;
+  color: #b45f1a;
+  font-weight: bold;
+}
+.banner-top .hd a span #icon{
+  display: inline-block;
+}
+.banner-top .hd a:hover{
+  color: #b45f1a;
+}
+.banner-top .hd .ul2{
+  width: 421px;
+  height:370px;
+  background:rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top:49px;
+  left:421px;
+  display: none;
+}
+.banner-top .hd .ul2 li{
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+.banner-top .hd .ul2 li a{
+  font-size: 20px;
+  color:black;
+}
+.banner-top .hd .ul3{
+  width: 421px;
+  height:370px;
+  background:rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top:49px;
+  left:421px;
+  display: none;
+}
+.banner-top .hd .ul3 li{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.banner-top .hd .ul3 li a{
+  font-size: 20px;
+  color:black;
+}
+.banner-top .hd a .walk {
+  margin-right: 50px;
+}
+.banner-top .hd a .road {
+  color: #4f4c43;
+  margin-left: 22px;
+}
+.banner-top .bd {
+  height: 100%;
+  float: right;
+  padding-right: 80px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.banner-top .bd ul {
+  height: 100%;
+}
+.banner-top .bd ul li {
+  height: 100%;
+  float: left;
+  margin-right: 56px;
+  font-size: 14px;
+  box-sizing: border-box;
+  
+}
+.banner-top .bd ul li.active{
+  border-bottom: 3px solid #b45f1a;
+}
+.banner-top .bd ul li a {
+  color: #b45f1a;
+}
+.banner-bt {
+  width: 100%;
+  height: 442px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+.banner-bt img {
+  width: 100%;
+  height: 100%;
+}
+.contact {
+  /* height: 638px; */
+  border: 1px solid #ccc;
+  border-bottom: 1px solid white;
+}
+.contact h2 {
+  text-align: center;
+  font-size: 54px;
+  padding-top: 86px;
+  font-weight: bold;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+}
+.contact .world {
+  width: 1266px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.contact p {
+  font-size: 20px;
+  color: #4f4c43;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.contact .more {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.contact .more span {
+  display: block;
+  margin-top: 12px;
+}
+.contact .less {
+  width: 670px;
+  margin: 0 auto;
+}
+.contact ul {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.contact ul li {
+  float: left;
+  width: 479px;
+  height: 668px;
+  overflow: hidden;
+  position: relative;
+  top:0px;
+  left:0px;
+}
+.contact ul li img:hover{
+  transform: scale(1.1);
+}
+
+.contact ul li img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition:all 1s ease; 
+  top:0;
+  left:0px;
+}
+.contact ul li span {
+  display: block;
+  width: 479px;
+  height: 94px;
+  font-size: 34px;
+  color: white;
+  padding-left: 36px;
+  padding-top: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 572px;
+  box-sizing: border-box;
+}
+.contact ul li span:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.contact ul li span i {
+  display: block;
+  float: right;
+  margin-right: 42px;
+  width: 20px;
+  height: 20px;
+}
+
+/* 中间结束 */

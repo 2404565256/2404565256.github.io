@@ -1,0 +1,584 @@
+        /* 初始化代码开始 */
+        
+        body,
+        div,
+        span,
+        p,
+        img,
+        input,
+        a,
+        ul,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        strong,
+        em,
+        del,
+        ins,
+        i,
+        dl,
+        dt,
+        dd {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .fontColorRed {
+            color: red;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        input {
+            border: 0;
+            outline: 0;
+        }
+        
+        img {
+            border: 0;
+            vertical-align: middle;
+            /* 清除底部的空白间隙 */
+        }
+        
+        i {
+            font-style: normal;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: normal;
+        }
+        
+        body {
+            font: 12px/100% "微软雅黑";
+        }
+        
+        .clearfix::after {
+            content: ".";
+            clear: both;
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        
+        @font-face {
+            font-family: 'iconfont';
+            src: url('./fonts/iconfont.eot');
+            src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('./fonts/iconfont.woff2') format('woff2'), url('./fonts/iconfont.woff') format('woff'), url('./fonts/iconfont.ttf') format('truetype'), url('./fonts/iconfont.svg#iconfont') format('svg');
+        }
+        
+        .iconfont {
+            font-family: "iconfont";
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* 初始化代码结束 */
+        /* top栏开始  */
+        
+        .dahezi {
+            width: 1438px;
+        }
+        
+        .top-nav {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 1436px;
+            height: 80px;
+        }
+        
+        .top-nav .cz {
+            height: 100%;
+        }
+        
+        .chezhu {
+            display: inline-block;
+            font-size: 38px;
+            color: #b45f1a;
+            margin-left: 120px;
+            line-height: 80px;
+        }
+        
+        .chezhu .ca1 {
+            color: #b45f1a;
+        }
+        
+        .top-nav .iconfont {
+            display: inline-block;
+            width: 30px;
+            height: 20px;
+            font-size: 20px;
+            margin-left: 72px;
+        }
+        
+        .top-nav .shuxian {
+            display: inline-block;
+            height: 40px;
+            width: 1px;
+            border: 1px solid black;
+            margin-left: 30px;
+            line-height: 80px;
+        }
+        
+        .top-nav .chezhu2 {
+            display: inline-block;
+            font-size: 38px;
+            color: #4f4c43;
+            margin-left: 28px;
+            line-height: 80px;
+        }
+        
+        .chezhu2 .ca2:hover {
+            color: #b45f1a;
+        }
+        
+        .top-nav .youbian {
+            float: right;
+            line-height: 80px;
+        }
+        
+        .top-nav .youbian li {
+            float: right;
+            margin-left: 40px;
+            margin-right: 40px;
+            line-height: 80px;
+            font-size: 28px;
+        }
+        
+        .top-nav li a {
+            color: #b45f1a;
+        }
+        
+        .top-nav .youbian li:hover {
+            color: #b45f1a;
+            border-bottom: 4px solid #b45f1a;
+        }
+        
+        .xian {
+            border-bottom: 2px solid #d9d9d9;
+            margin-top: 7px;
+        }
+        /* 背景图开始 */
+        
+        .bjt {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 1438px;
+            height: 656px;
+            background: url(../images/diyizhang.jpg)no-repeat;
+        }
+        
+        .bjt .chezhuquanyi {
+            position: absolute;
+            top: 580px;
+            left: 590px;
+            display: block;
+            color: #000;
+            font-size: 42px;
+            height: 100px;
+        }
+        /* 背景图结束 */
+        /* 文字开始 */
+        
+        .wenzhi {
+            width: 1438px;
+            height: 300px;
+        }
+        
+        .wenzhi .hezi {
+            height: 300px;
+            width: 300px;
+            float: left;
+            margin-left: 58px;
+        }
+        
+        .wenzhi .hezi .quanyi {
+            height: 30px;
+            width: 300px;
+            margin-left: -30px;
+        }
+        
+        .wenzhi .hezi .quanyi .text {
+            text-align: center;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        
+        .wenzhi .shijie {
+            width: 300px;
+            height: 38px;
+        }
+        
+        .wenzhi .shijie .text2 {
+            font-size: 17px;
+            line-height: 38px;
+            margin-left: 20px;
+        }
+        
+        .wenzhi .dazhao {
+            width: 240px;
+            height: 26px;
+        }
+        
+        .wenzhi .dazhao .text3 {
+            font-size: 17px;
+            line-height: 26px;
+            text-align: center;
+        }
+        
+        .wenzhi .zhunxiang {
+            width: 240px;
+            height: 40px;
+        }
+        
+        .wenzhi .zhunxiang .text4 {
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        .wenzhi .xiazhai {
+            height: 52px;
+            width: 240px;
+            background-color: #b45f1a;
+            border: 1px solid black;
+        }
+        
+        .wenzhi .xiazhai:hover {
+            height: 52px;
+            width: 240px;
+            background-color: white;
+        }
+        
+        .wenzhi .xiazhai .text5 {
+            color: white;
+            font-size: 22px;
+            line-height: 52px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .wenzhi .xiazhai .text5:hover {
+            line-height: 50px;
+            color: black;
+            background-color: white;
+        }
+        
+        .huiyuan {
+            width: 1438px;
+            height: 88px;
+        }
+        
+        .huiyuan .hui {
+            font-size: 30px;
+            text-align: center;
+            line-height: 88px;
+        }
+        
+        .quanyi2 {
+            width: 1438px;
+            height: 174px;
+            overflow: hidden;
+        }
+        
+        .quanyi2 .yi {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 10px;
+            color: #4f4c43;
+        }
+        
+        .quanyi2 .jia {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+        
+        .quanyi2 .zao {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 10px;
+        }
+        
+        .quanyi2 .zuo {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 10px;
+        }
+        
+        .quanyi2 .zhenhao {
+            margin: 0 auto;
+            margin-top: 15px;
+            height: 52px;
+            width: 240px;
+            background-color: #b45f1a;
+            border: 1px solid black;
+        }
+        
+        .quanyi2 .zhenhao:hover {
+            color: black;
+            font-size: 22px;
+            line-height: 52px;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .quanyi2 .zhenhao .text5 {
+            font-size: 22px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+        }
+        
+        .quanyi2 .zhenhao .text5:hover {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+        
+        .sushi {
+            width: 1438px;
+            height: 238px;
+            overflow: hidden;
+            margin-top: 100px;
+        }
+        
+        .sushi .ty {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 10px;
+            color: #4f4c43;
+        }
+        
+        .sushi .haohua {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+        
+        .sushi .haohua {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+        
+        .sushi .shi {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+        
+        .sushi .qiu {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 30px;
+        }
+        
+        .sushi .zizai {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+        /* 文字结束 */
+        /* 背景图2开始 */
+        
+        .bj {
+            width: 1438px;
+            height: 458px;
+            background: url(../images/chezi\ \(2\).jpg)no-repeat;
+            /* margin-top: 40px; */
+        }
+        
+        .aiche {
+            width: 1438px;
+            height: 138px;
+            /* background-color: green; */
+            overflow: hidden;
+        }
+        
+        .aiche .ai {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 46px;
+            color: #4f4c43;
+        }
+        
+        .aiche .xin {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 30px;
+        }
+        
+        .aiche .duo {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+        
+        .bj2 {
+            width: 1438px;
+            height: 440px;
+            background: url(../images/ws.xh.jpg)no-repeat;
+        }
+        
+        .quancen {
+            width: 1438px;
+            height: 188px;
+            /* background-color: red; */
+            overflow: hidden;
+        }
+        
+        .quancen .you {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 36px;
+            color: #4f4c43;
+        }
+        
+        .quancen .xh {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .quancen .yuan {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .quancen .wu {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .quancen .tou {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .quancen .toshi {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .quancen .shi {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .bj3 {
+            width: 1438px;
+            height: 440px;
+            background: url(../images/ws.jpg.jpg)no-repeat;
+        }
+        
+        .wse {
+            width: 1438px;
+            height: 138px;
+            overflow: hidden;
+        }
+        
+        .wse .ti {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 44px;
+            color: #4f4c43;
+        }
+        
+        .wse .ty {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .wse .dx {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .bj4 {
+            width: 1438px;
+            height: 440px;
+            background: url(../images/shuibei.jpg.jpg)no-repeat;
+        }
+        
+        .txcc {
+            overflow: hidden;
+            width: 1438px;
+            height: 188px;
+        }
+        
+        .txcc .cc {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 30px;
+            color: #4f4c43;
+        }
+        
+        .txcc .wl {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .txcc .lk {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .txcc .zg {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .txcc .zgdjt {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f4c43;
+        }
+        
+        .bj5 {
+            width: 1438px;
+            height: 440px;
+            background: url(../images/bxh.jpg)no-repeat;
+        }
+        /* 背景图2结束 */
